@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,154 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-he-TAT">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u25-86-gHl" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjo-qf-c2h" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="240" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghw-rI-DDY" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minY="240" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-Mh-GSr" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="120" minY="240" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-0W-tBX" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="240" minY="240" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-27-n3Y" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="240" minY="120" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQf-6h-1HF" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minY="120" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X72-5V-nWc" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="120" minY="120" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z26-fl-zzS" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <frame key="frameInset" minX="120" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="E2q-3t-DUC"/>
+                                    <constraint firstAttribute="height" constant="350" id="vvY-5o-Xtj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-ya-33S">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Reset Board">
+                                    <color key="titleColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3XN-5b-cTq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TicTacToe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHk-A5-UV5">
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Brian Thyfault" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61Z-Km-3Gi">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.22526400076910627" green="0.22763520077720212" blue="0.22763520077720212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WzK-ya-33S" secondAttribute="bottom" constant="67" id="55Y-La-SWb"/>
+                            <constraint firstItem="61Z-Km-3Gi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="7rZ-BY-2jf"/>
+                            <constraint firstItem="WzK-ya-33S" firstAttribute="top" secondItem="Q9I-he-TAT" secondAttribute="bottom" constant="61.5" id="Dtn-eB-CSQ"/>
+                            <constraint firstItem="lHk-A5-UV5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EJX-2Z-KYr"/>
+                            <constraint firstItem="Q9I-he-TAT" firstAttribute="top" secondItem="61Z-Km-3Gi" secondAttribute="bottom" constant="50.5" id="LSP-TL-6ob"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="61Z-Km-3Gi" secondAttribute="trailing" constant="104" id="Lbr-eO-tr9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lHk-A5-UV5" secondAttribute="trailing" constant="29" id="RP3-ia-4co"/>
+                            <constraint firstItem="Q9I-he-TAT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RaL-OO-fDB"/>
+                            <constraint firstItem="WzK-ya-33S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="118" id="XgF-1x-IaI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WzK-ya-33S" secondAttribute="trailing" constant="118" id="Z5v-I7-BXb"/>
+                            <constraint firstItem="Q9I-he-TAT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cpj-hs-QWF"/>
+                            <constraint firstItem="lHk-A5-UV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="eq3-rF-stX"/>
+                            <constraint firstItem="61Z-Km-3Gi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f6H-CL-4P5"/>
+                            <constraint firstItem="Q9I-he-TAT" firstAttribute="top" secondItem="lHk-A5-UV5" secondAttribute="bottom" constant="50.5" id="h0M-57-9ek"/>
+                            <constraint firstItem="lHk-A5-UV5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nkx-h7-Sp7"/>
+                            <constraint firstItem="61Z-Km-3Gi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="qFb-IY-lJh"/>
+                            <constraint firstItem="WzK-ya-33S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yeT-mm-I2U"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ywJ-md-hA3" appends="YES" id="IYG-Eh-Hk9"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="gameBoard" destination="Q9I-he-TAT" id="4NL-sW-2HD"/>
+                        <outlet property="r1c1" destination="u25-86-gHl" id="QMp-ei-9Fk"/>
+                        <outlet property="r1c2" destination="z26-fl-zzS" id="2mj-f0-nwN"/>
+                        <outlet property="r1c3" destination="rjo-qf-c2h" id="YTh-Ey-6Sg"/>
+                        <outlet property="r2c1" destination="QQf-6h-1HF" id="Vsh-Ff-7EK"/>
+                        <outlet property="r2c2" destination="X72-5V-nWc" id="AI6-Ur-uEe"/>
+                        <outlet property="r2c3" destination="lsP-27-n3Y" id="hMA-Al-hGM"/>
+                        <outlet property="r3c1" destination="Ghw-rI-DDY" id="zoy-r1-hiS"/>
+                        <outlet property="r3c2" destination="NgS-Mh-GSr" id="taI-Nv-X8B"/>
+                        <outlet property="r3c3" destination="6K5-0W-tBX" id="ahY-8d-2FZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ywJ-md-hA3">
+                    <connections>
+                        <action selector="boardTapped:" destination="BYZ-38-t0r" id="CKw-JW-bgE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
         </scene>
     </scenes>
 </document>
